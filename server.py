@@ -34,4 +34,4 @@ def get_music():
 app.secret_key = 'this_a_non_secret_key'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=33507)
