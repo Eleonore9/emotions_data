@@ -78,3 +78,11 @@ class Element(Base):
         "gets all the elements"
         elements = session.query(Element).all()
         return elements
+
+    def get_all_imgs(cls, element_type):
+        imgs = session.query(Element).filter_by(element_type=element_type).all()
+        return imgs
+
+    def get_all_videos(cls, element_type):
+        videos = session.query(Element).filter_by(element_type=element_type).all()
+        return videos

@@ -1,5 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
+<h1>Here, have a dose of sunshine</h1>
+<div id="images">
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -15,7 +17,7 @@
       	<div class="carousel-caption">
       	</div>	
     </div>
-{% for element in elements[1:] %}
+{% for element in elements[1:-2] %}
     <div class="item">
       	<img src="{{element.url}}" alt="{{element.title}}">
       	<div class="carousel-caption">
@@ -32,5 +34,17 @@
     <span class="glyphicon glyphicon-chevron-right"></span>
   </a>
 </div>
+</div>
+
+<!--<div id="music">
+<p><a class="btn btn-lg btn-success" href="/emotions/music" role="button">music</a></p>
+</div>-->
+<!--<div id="videos">
+{{elements[-1].url}}
+<video width="640" height="480" controls>
+  <source src="https://www.dropbox.com/s/4o1ldnuunl81bi7/AutumnInNewYork.mp4" controls>
+  Your browser does not support the video tag.
+</video>
+</div>-->
 
 {% endblock %}
