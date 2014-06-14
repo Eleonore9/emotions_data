@@ -16,6 +16,11 @@ def index():
     #return 'Hello %s!' %user.username
     return render_template('index.html')
 
+@app.route('/emotions')
+def emotions():
+    element = model.Element.get(1)
+    return render_template('emotions.html', element=element)
+
 
 app.secret_key = 'this_a_non_secret_key'
 
