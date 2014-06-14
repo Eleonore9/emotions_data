@@ -7,6 +7,9 @@ import requests
 import json
 
 app= Flask(__name__)
+app.config.update(
+        DEBUG = True,
+)
 
 @app.teardown_request
 def teardown_request(exc):
@@ -34,4 +37,5 @@ def get_music():
 app.secret_key = 'this_a_non_secret_key'
 
 if __name__ == '__main__':
-    app.run(debug=True, port=33507)
+    port = int9os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
