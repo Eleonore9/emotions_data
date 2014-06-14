@@ -20,10 +20,10 @@ def index():
 def emotions():
     #element = model.Element.get(5)
     elements = model.Element.get_all()
-    return render_template('emotions.html', elements=elements)
+    return render_template('emotions.html', elements=element)
 
 
 app.secret_key = 'this_a_non_secret_key'
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=33507)

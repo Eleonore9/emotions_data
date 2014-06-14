@@ -72,4 +72,9 @@ class Element(Base):
         """get an element using its id """
         element = session.query(Element).get(id)
         return element
-
+    
+    @classmethod
+    def get_all(cls):
+        "gets all the elements"
+        elements = session.query(Element).all()
+        return elements
