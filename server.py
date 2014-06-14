@@ -37,5 +37,5 @@ def get_music():
 app.secret_key = 'this_a_non_secret_key'
 
 if __name__ == '__main__':
-    port = int9os.environ.get('PORT', 5000))
+    port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
