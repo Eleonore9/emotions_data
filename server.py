@@ -18,7 +18,7 @@ def index():
 
 @app.route('/emotions')
 def emotions():
-    element = model.Element.get(1)
+    element = model.Element.get(3)
     return render_template('emotions.html', element=element)
 
 
