@@ -59,11 +59,10 @@ class Element(Base):
         self.posted_at = posted_at
         self.user_id = user_id
 
-	#--------class methods--------------------
     @classmethod
     def new(cls, title, url, element_type, emotion, weather, user_id):
         now = datetime.datetime.now()
-        element = Element(None, title, url, element_type, emotion, weather, now, user_id)
+        element = Element(title, url, element_type, emotion, weather, now, user_id)
         session.add(element)
         session.commit()
         return element
