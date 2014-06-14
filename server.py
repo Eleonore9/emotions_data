@@ -18,8 +18,9 @@ def index():
 
 @app.route('/emotions')
 def emotions():
-    element = model.Element.get(3)
-    return render_template('emotions.html', element=element)
+    #element = model.Element.get(5)
+    elements = model.Element.get_all()
+    return render_template('emotions.html', elements=elements)
 
 
 app.secret_key = 'this_a_non_secret_key'

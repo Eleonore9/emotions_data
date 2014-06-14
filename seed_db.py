@@ -2,9 +2,9 @@ import model
 
 #user1 = model.User.new("eleonore.mayola@ymail.com", "password", "Eleonore")
 
-e2 = model.Element.new(
-                    "palm tree in backyard", 
-                    "https://lh5.googleusercontent.com/-9SFoYJORe7M/UgqH7VyJlDI/AAAAAAAAIhk/NeIAaATQiCU/w1140-h759-no/IMG_1446.JPG",
+e4 = model.Element.new(
+                    "dawn", 
+                    "https://lh6.googleusercontent.com/-dGxMUM2zFas/UgqIL1bA6VI/AAAAAAAAIjA/IBTVPs8OeBc/w1012-h759-no/17042011612.jpg",
                     "image",
                     "sad",
                     "cloudy",
