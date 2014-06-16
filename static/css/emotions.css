@@ -1,3 +1,7 @@
+/*----------NavBar------------*/
+.navbar-inverse .navbar-brand {
+    color: #6AB7F2;
+}
 .jumbotron{
 	margin-top: 3%;
 }
