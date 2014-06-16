@@ -81,21 +81,22 @@ class Element(Base):
         elements = session.query(Element).all()
         return elements
     
-    #-------instance methods
-    def get_all_type(self, element_type):
+    @classmethod
+    def get_all_type(cls, element_type):
         """get all elements of a certain type"""
         elements_of_type = []
         all_types = session.query(Element).filter_by(element_type=element_type).all()
         for e in all_types:
             elements_of_type.append(e)
         return elements_of_type
-
-    def get_all_emotion(self, emotion):
+    
+    @classmethod
+    def get_all_emotion(cls, emotion):
         """get all elements linked to a certain emotion"""
         elements_of_emotion = []
         all_emotions = session.query(Element).filter_by(emotion=emotion).all()
         for a in all_emotions:
-            elements_of_emotion.appemd(a)
+            elements_of_emotion.append(a)
         return elements_of_emotion
 
 
