@@ -23,9 +23,8 @@ def index():
 
 @app.route('/emotions')
 def emotions():
-    elements = model.Element.get_all()
-    #imgs = model.Element.get_all_imgs("image")
-    #vids = model.Element.get_all_videos("video")
+    #elements = model.Element.get_all()
+    elements = model.Element.get_all_emotion("sad")
     return render_template('emotions.html', elements=elements)
 
 #@app.route('/emotions/music')

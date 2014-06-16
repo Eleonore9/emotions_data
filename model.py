@@ -17,6 +17,7 @@ class User(Base):
         self.password = password
         self.username = username
 
+    #-------class methods
     @classmethod
     def authenticate(cls, email, password):
         auth = session.query(User).filter_by(email=email, password=password).first()
@@ -58,7 +59,8 @@ class Element(Base):
         self.weather = weather
         self.posted_at = posted_at
         self.user_id = user_id
-
+    
+    #-------class methods
     @classmethod
     def new(cls, title, url, element_type, emotion, weather, user_id):
         now = datetime.datetime.now()
@@ -75,14 +77,27 @@ class Element(Base):
     
     @classmethod
     def get_all(cls):
-        "gets all the elements"
+        """gets all the elements"""
         elements = session.query(Element).all()
         return elements
+    
+    #-------instance methods
+    def get_all_type(self, element_type):
+        """get all elements of a certain type"""
+        elements_of_type = []
+        all_types = session.query(Element).filter_by(element_type=element_type).all()
+        for e in all_types:
+            elements_of_type.append(e)
+        return elements_of_type
 
-    def get_all_imgs(cls, element_type):
-        imgs = session.query(Element).filter_by(element_type=element_type).all()
-        return imgs
+    def get_all_emotion(self, emotion):
+        """get all elements linked to a certain emotion"""
+        elements_of_emotion = []
+        all_emotions = session.query(Element).filter_by(emotion=emotion).all()
+        for a in all_emotions:
+            elements_of_emotion.appemd(a)
+        return elements_of_emotion
 
-    def get_all_videos(cls, element_type):
-        videos = session.query(Element).filter_by(element_type=element_type).all()
-        return videos
+
+if __name__ == "__main__":
+    pass
