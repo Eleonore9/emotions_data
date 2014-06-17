@@ -15,10 +15,10 @@ app.config.update(
 def teardown_request(exc):
 	model.session.close()
 
+#----For now simple homepage that directly
+#----links to the 'emotions' page, no user session
 @app.route('/')
 def index():
-    #user = model.User.get(1)
-    #return 'Hello %s!' %user.username
     return render_template('index.html')
 
 @app.route('/emotions')
@@ -32,6 +32,28 @@ def emotions():
     #url = "http://ws.audioscrobbler.com/2.0/?method=tag.getTopTags&api_key=de7fb3597dd8746a57b068228cb9f986&format=json"
     #r = requests.get(url)
     #return json.dumps(r.json())
+
+#----User login to implement later
+@app.route("/authenticate", methods=['POST'])
+def authenticate():
+	email = request.form['email']
+	password = request.form['password']
+	user_auth = model.User.authenticate(email, password)
+	if user_auth is not None:
+		session['user_id'] = user_auth.id
+		flash('You were logged in successfully!')
+		return redirect(url_for("enter_text"))
+	return redirect(url_for("index"))
+
+@app.route("/sign_up")
+def sign_up():
+    return render_template("signup.html")
+
+@app.route("/logout")
+def logout():
+	session.pop('user_id', None)
+	flash('You were logged out.')
+	return redirect(url_for('index'))
 
 app.secret_key = 'this_a_non_secret_key'
 
