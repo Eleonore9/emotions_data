@@ -2,10 +2,10 @@ import model
 
 #user1 = model.User.new("eleonore.mayola@ymail.com", "password", "Eleonore")
 
-e4 = model.Element.new(
-                    "dawn", 
-                    "https://lh6.googleusercontent.com/-dGxMUM2zFas/UgqIL1bA6VI/AAAAAAAAIjA/IBTVPs8OeBc/w1012-h759-no/17042011612.jpg",
-                    "image",
+e5 = model.Element.new(
+                    "autumn in NYc", 
+                    "https://www.dropbox.com/s/s8nxzvjq80m8dyn/AutumnInNewYork%20%28nancy%20perlman%27s%20conflicted%20copy%202014-06-14%29.mp4",
+                    "video",
                     "sad",
                     "cloudy",
                     1
