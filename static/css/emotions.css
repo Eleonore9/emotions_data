@@ -5,6 +5,10 @@
 .jumbotron{
 	margin-top: 3%;
 }
+/*------------ Masonry ------------*/
+.item {
+    width: 20%;
+}
 /*-----------Caroussel--------------*/
 .carousel {
 /*position: relative;*/

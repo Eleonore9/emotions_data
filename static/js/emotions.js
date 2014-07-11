@@ -12,13 +12,6 @@
   //});
 //};
 
-var container = document.querySelector('#container');
-var msnry = new Masonry( container, {
-    // options
-    columnWidth: 200,
-    itemSelector: '.item'
-});
-
 $(document).ready(function() {
   $('.jumbotron .btn').click(function(){
     $('.jumbotron').append('<p> Are you ready?</p>');
@@ -28,4 +21,12 @@ $(document).ready(function() {
      $('.jumbotron').append('<p>Too bad!</p>');
     });
   });
+    var container = document.querySelector('#images');
+    var msnry = new Masonry( container, {
+        // options
+        //columnWidth: 100,
+        gutter: 5,
+        //isFitWidth: true,
+        itemSelector: '.item'
+    });
 })
