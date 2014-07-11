@@ -24,8 +24,8 @@ $(document).ready(function() {
     var container = document.querySelector('#images');
     var msnry = new Masonry( container, {
         // options
-        //columnWidth: 100,
-        gutter: 5,
+        columnWidth: 50,
+        //gutter: 5,
         //isFitWidth: true,
         itemSelector: '.item'
     });
