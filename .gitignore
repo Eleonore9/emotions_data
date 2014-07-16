@@ -1,5 +1,4 @@
 *.pyc
-*.html~
-*.css~
-*.js~
 *.swp
+*.*~
+edata/*

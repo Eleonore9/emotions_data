@@ -1,10 +1,34 @@
 /*----------NavBar------------*/
+.navbar-header {
+    padding-left: 1%;
+}
 .navbar-inverse .navbar-brand {
     color: #6AB7F2;
 }
 .jumbotron{
 	margin-top: 3%;
+    margin-left: 20%;
+    width: 70%;
 }
+/*------ Content and spacing ------*/
+.elements {
+    padding: 2%;
+    width: 90%;
+}
+/*------------ Masonry ------------*/
+#images {
+    width: 100%;
+}
+.item {
+        width: 30%;
+        margin-bottom: 1%
+}
+.item img {
+    width: 100%;
+    height: 100%;
+}
+
+/* not using the caroussel anymore */
 /*-----------Caroussel--------------*/
 .carousel {
 /*position: relative;*/
