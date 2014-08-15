@@ -9,9 +9,17 @@ tree = html.fromstring(page.text)
 
 # Use XPath to locate the info needed
 pins = tree.xpath('//a[@class="pinImageWrapper"]/attribute::href')
+urls = tree.xpath('//img[@class="pinImg"]/attribute::src')
+
 count = 0
 for p in pins:
     pin = 'http://www.pinterest.com' + p
     count += 1
-    print pin
+    print 'PIN: ', pin
 print count
+
+index = 0
+for u in urls:
+    index += 1
+    print 'URL: ', u
+print index
